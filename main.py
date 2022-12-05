@@ -3,10 +3,10 @@ import fitz
 import nltk
 import re  # Menghapus karakter angka.
 import string  # Menghapus karakter tanda baca.
-import pandas as pd
-from nltk.tokenize import sent_tokenize, word_tokenize
-from nltk.corpus import stopwords
-from nltk.probability import FreqDist
+# import pandas as pd
+# from nltk.tokenize import sent_tokenize, word_tokenize
+# from nltk.corpus import stopwords
+# from nltk.probability import FreqDist
 import matplotlib.pyplot as plt
 from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 from Sastrawi.StopWordRemover.StopWordRemoverFactory import StopWordRemoverFactory, StopWordRemover, ArrayDictionary
@@ -16,9 +16,6 @@ with fitz.open("example.pdf") as doc:
     kalimat = ""
     for page in doc:
         kalimat += page.get_text()
-
-
-# kalimat = "Andi kerap melakukan transaksi rutin secara daring atau online. Menurut Andi belanja online lebih praktis & murah."
 
 # Merubah format teks menjadi format huruf kecil semua (lowercase).
 lower_case = kalimat.lower()
@@ -65,6 +62,7 @@ def Convert(string):
 
 # Menghitung frekuensi kemunculan setiap tokens(kata) dalam teks.
 kemunculan = nltk.FreqDist(Convert(hasil))
+print(kemunculan.most_common())
 
 # Menggambarkan frekuensi kemunculan setiap tokens
 kemunculan.plot(100, cumulative=False)
