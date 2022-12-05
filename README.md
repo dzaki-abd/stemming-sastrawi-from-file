@@ -1,4 +1,4 @@
-# stemming-sastrawi-from-file
+# stemming-sastrawi-from-pdf
 Stemming menggunakan metode Sastrawi yang diambil dari file berupa pdf / word
 
 Library Yang Digunakan :
