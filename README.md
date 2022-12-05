@@ -5,6 +5,6 @@ Library Yang Digunakan :
 1. nltk
 2. re
 3. matplotlib.pyplot
-4. fitz
+4. fitz (PyMuPDF)
 5. Sastrawi.Stemmer.StemmerFactory
 6. Sastrawi.StopWordRemover.StopWordRemoverFactory
